@@ -1,24 +1,22 @@
 # Technical Architecture 🏗️
 
-The project is built using modern technologies to ensure speed and privacy.
+Nano Banana is engineered for performance, scalability, and extreme user privacy.
 
-## Tech Stack
-- **Frontend**: React 19.
-- **Styling**: Tailwind CSS with built-in RTL support.
-- **AI Engine**: Google Gemini API (2.5 Flash and 3.0 Pro models).
-- **Storage**: IndexedDB (via `dbService.ts`) for persistent local storage.
+## Core Stack
+- **Library**: React 19 (using the latest concurrent features).
+- **Styling**: Tailwind CSS with custom configuration for dynamic runtime themes.
+- **AI Core**: Google Gemini API Integration via `@google/genai`.
+- **Database**: IndexedDB for client-side persistence (Service Layer: `dbService.ts`).
 
-## Deployment Options
-The project supports various hosting platforms. Review the following guides:
-- [Deploying to GitHub Pages](./GITHUB_PAGES.md) 🐙
-- [Deploying to Cloudflare Pages](./CLOUDFLARE.md) ☁️
-- [Deploying to CyberPanel + OpenLiteSpeed](./CYBERPANEL_INSTALL.md) ⚡
+## Component Structure
+- `App.tsx`: Main router and state manager.
+- `geminiService.ts`: Centralized AI logic handling multimodal inputs.
+- `AdminDashboard.tsx`: Secure management module.
+- `Theme Engine`: Real-time CSS variable injection based on DB settings.
 
-## Important File Structure
-- `/services/geminiService.ts`: Handles all AI interactions.
-- `/services/dbService.ts`: Local database system.
-- `/components/AdminDashboard.tsx`: Admin interface.
-- `App.tsx`: Main routing and application logic.
-
-## Privacy & Security
-API keys are handled as environment variables across all platforms to ensure they are never leaked in the public source code.
+## Data Flow
+1. **User Input**: Image and Prompt captured in UI.
+2. **Service Layer**: Data sanitized and sent to Gemini API.
+3. **Processing**: AI returns Base64 data.
+4. **Persistence**: Transaction logged in IndexedDB.
+5. **Output**: Result rendered and made available for download.

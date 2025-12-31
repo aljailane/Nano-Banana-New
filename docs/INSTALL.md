@@ -1,29 +1,26 @@
 # Installation and Setup Guide 🚀
 
-Welcome to the **Nano Banana AI** project. This guide will help you get the project running on your local machine.
+Welcome to the **Nano Banana AI** project. This guide provides the steps to initialize the environment on your local machine.
 
 ## Prerequisites
 - **Node.js**: Version 18 or later.
-- **npm** or **yarn**.
-- **Gemini API Key**: You can obtain one from [Google AI Studio](https://aistudio.google.com/).
+- **Package Manager**: npm or yarn.
+- **Gemini API Key**: Obtain your key from [Google AI Studio](https://aistudio.google.com/).
 
 ## Setup Steps
-1. **Download Project**: Extract the files into a dedicated folder.
+1. **Prepare Workspace**: Extract the project files into a dedicated folder.
 2. **Install Dependencies**:
    ```bash
    npm install
    ```
-3. **Configure API Key**:
-   - Create a `.env` file in the root directory.
-   - Add your API key:
-     ```env
-     API_KEY=your_gemini_api_key_here
-     ```
-4. **Run the Project**:
+3. **Environment Configuration**:
+   - The application relies on `process.env.API_KEY`. 
+   - Ensure the key is available in your development environment.
+4. **Launch Application**:
    ```bash
    npm run dev
    ```
 
-## Important Notes
-- The project uses **IndexedDB** for local storage, so your data and settings will persist in your browser.
-- On the first run, the system will ask you to set an Admin password when you attempt to access the Dashboard.
+## Technical Notes
+- **Persistence**: The project utilizes **IndexedDB** for local storage. Your settings and user data remain stored in the browser's persistent storage.
+- **Initial Configuration**: On the first launch, accessing the Admin Dashboard will trigger a setup wizard to define your administrative password.

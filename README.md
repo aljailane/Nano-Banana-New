@@ -1,4 +1,4 @@
-# 🍌 Nano Banana - محرر الصور الذكي (نانو بانانا)
+# 🍌 Nano Banana - Smart AI Image Studio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
@@ -6,55 +6,34 @@
 
 ---
 
-## 🌍 (العربية) حول المشروع
+## 🌍 About the Project
 
-**نانو بانانا** هو تطبيق ويب متطور لتحرير وتوليد الصور باستخدام أقوى نماذج الذكاء الاصطناعي من جوجل (Gemini). يتميز التطبيق بواجهة مستخدم عربية بالكامل (RTL) وتصميم عصري يجمع بين البساطة والقوة التقنية.
-
-### ✨ المميزات الرئيسية
-*   **تعديل الصور بالذكاء الاصطناعي**: قم بوصف التعديل الذي تريده على صورتك وسيقوم Gemini بتنفيذه.
-*   **توليد الصور من النص**: حوّل أفكارك إلى لوحات فنية بدقة تصل إلى 4K.
-*   **تحسين جودة الصور**: رفع دقة الصور القديمة، تحسين ملامح الوجه، وإزالة التشويش.
-*   **إزالة الخلفية الذكية**: عزل العناصر الأساسية والحصول على صور PNG شفافة بدقة متناهية.
-*   **لوحة تحكم للمسؤول**: نظام إدارة محتوى متكامل للتحكم في الألوان، النماذج، والعمليات.
-*   **قاعدة بيانات محلية**: استخدام IndexedDB لضمان خصوصية بياناتك وسرعة استجابة التطبيق.
-
-### 🛠️ التقنيات المستخدمة
-*   **React 19**: المحرك الرئيسي للواجهة.
-*   **Google Gemini API**: العقل المدبر لعمليات الذكاء الاصطناعي.
-*   **Tailwind CSS**: لتصميم واجهة مستخدم متجاوبة وعصرية.
-*   **Firebase/Local Auth**: نظام إدارة المستخدمين.
-*   **IndexedDB**: للتخزين المحلي المستمر.
-
----
-
-## 🌐 (English) About the Project
-
-**Nano Banana** is an advanced AI-powered image editing and generation web application utilizing Google's Gemini models. It features a fully responsive RTL/LTR interface with a focus on ease of use and professional results.
+**Nano Banana** is a cutting-edge web application for image editing and generation powered by Google's Gemini AI. It offers a premium user experience with full RTL support, a modern dark-mode interface, and a robust administrative system.
 
 ### ✨ Key Features
-*   **AI Image Editing**: Describe changes to your images and let Gemini perform them magically.
-*   **Text-to-Image Generation**: Convert prompts into high-quality artwork up to 4K resolution.
-*   **Image Enhancement**: Upscale low-res images, enhance facial features, and remove noise.
-*   **Smart Background Removal**: Perfectly isolate subjects and generate transparent PNGs.
-*   **Admin Dashboard**: A built-in CMS to manage site settings, themes, and AI models.
-*   **Local Storage**: Powered by IndexedDB for high performance and user privacy.
+*   **AI Image Editing**: Describe changes in natural language, and Gemini executes them precisely.
+*   **Text-to-Image Generation**: High-fidelity art generation from prompts, supporting up to 4K resolution.
+*   **Image Enhancement**: Upscale resolution, enhance facial details, and remove digital noise.
+*   **Smart Background Removal**: Perfectly isolate subjects to create professional transparent PNGs.
+*   **Full Admin Dashboard**: Comprehensive CMS to manage site identity, themes, AI models, and logs.
+*   **Privacy-First Architecture**: Uses IndexedDB for secure, persistent local storage.
 
 ### 🛠️ Tech Stack
-*   **React 19**: Modern frontend framework.
-*   **Google Gemini API**: Core AI processing engine.
-*   **Tailwind CSS**: Utility-first styling with RTL support.
-*   **Firebase/Local Auth**: Hybrid user authentication system.
-*   **IndexedDB**: Persistent client-side database.
+*   **React 19**: Modern component-based frontend.
+*   **Google Gemini API**: Advanced multimodal AI processing.
+*   **Tailwind CSS**: Utility-first styling with dynamic theme variables.
+*   **Firebase / Local Auth**: Flexible user authentication system.
+*   **IndexedDB**: High-performance browser-side database.
 
 ---
 
-## 🚀 التثبيت والتشغيل | Installation & Setup
+## 🚀 Installation & Setup
 
-### 1. المتطلبات | Prerequisites
+### 1. Prerequisites
 *   Node.js (v18+)
-*   Gemini API Key ([Get it here](https://aistudio.google.com/))
+*   Gemini API Key ([Get it from AI Studio](https://aistudio.google.com/))
 
-### 2. الخطوات | Steps
+### 2. Quick Start
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/nano-banana.git
@@ -62,27 +41,25 @@ git clone https://github.com/your-username/nano-banana.git
 # Install dependencies
 npm install
 
-# Set up environment variables (.env)
-API_KEY=your_gemini_api_key
-
-# Run the project
+# Run the development server
 npm run dev
 ```
 
 ---
 
-## 📄 التوثيق | Documentation
-يمكنك العثور على أدلة تفصيلية داخل مجلد `docs/`:
-*   [دليل التثبيت المحلي](./docs/INSTALL.md)
-*   [دليل المستخدم](./docs/GUIDE.md)
-*   [النشر على Cloudflare](./docs/CLOUDFLARE.md)
-*   [النشر على CyberPanel](./docs/CYBERPANEL_INSTALL.md)
+## 📄 Documentation
+Explore our detailed technical guides in the `docs/` folder:
+*   [Local Installation Guide](./docs/INSTALL.md)
+*   [End-User Manual](./docs/GUIDE.md)
+*   [Admin Control Panel Guide](./docs/ADMIN.md)
+*   [Cloudflare Pages Deployment](./docs/CLOUDFLARE.md)
+*   [GitHub Pages Deployment](./docs/GITHUB_PAGES.md)
+*   [CyberPanel/OpenLiteSpeed Server Setup](./docs/CYBERPANEL_INSTALL.md)
 
 ---
 
-## 📜 الترخيص | License
-هذا المشروع مرخص بموجب رخصة **MIT**. جميع الحقوق محفوظة © 2024.
+## 📜 License
+This project is licensed under the **MIT License**. All rights reserved © 2024.
 
 ---
-**تم التطوير بكل ❤️ بواسطة نانو بانانا الذكي.**
 **Developed with ❤️ by Nano Banana AI.**

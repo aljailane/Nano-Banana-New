@@ -1,19 +1,20 @@
-# Admin Dashboard Guide 🛠️
+# Admin Dashboard Documentation 🛠️
 
-The Control Panel is the heart of the project, allowing you to manage everything without touching the code.
+The Control Panel allows for full application management without code modification.
 
-## Accessing the Dashboard
-- Click the "Gear" or "Dashboard" icon in the top header.
-- If it's your first time, you will be prompted to set a password.
+## Authentication
+- Access the dashboard via the **Gear icon** in the header.
+- The session is protected by a password stored in the local encrypted database.
+- Idle sessions expire automatically after 60 minutes for security.
 
-## Main Sections
-1. **Overview**: Real-time statistics on user count, executed processes, and daily activity.
-2. **User Management**: View the list of registered users, their join dates, and delete accounts if necessary.
-3. **Process Logs (AI Logs)**: A complete history of every generation or edit performed, showing status (success/failure) and the model used.
-4. **Site Settings**: Change the site name and enable/disable public settings for users.
-5. **Model Management**: Enable or disable specific models (e.g., Gemini Pro) based on your needs.
-6. **Theme Customization**: Change primary colors and border radius to update the site's identity instantly.
+## Modules
+1. **Analytics Overview**: Monitor total users, AI process success rates, and daily traffic.
+2. **User Management**: View, audit, or remove registered users.
+3. **AI Activity Logs**: Detailed history of every generation, showing the model used and execution status.
+4. **Site Identity**: Update the application name and toggle public visibility of settings.
+5. **Model Control**: Enable or disable specific Gemini models (e.g., 2.5 Flash vs 3.0 Pro).
+6. **Dynamic Theming**: Modify CSS variables (primary colors, border radius) globally.
 
-## Security
-- Admin sessions last for 60 minutes.
-- You can change the admin password from the "Security" section within the dashboard.
+## SMTP Configuration
+- Essential for password recovery and verification emails.
+- Supports standard SMTP hosts like Gmail, Outlook, or private mail servers.
