@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
@@ -14,13 +15,12 @@
               sans: ['Noto Sans Arabic', 'sans-serif'],
             },
             colors: {
-              // Map colors to CSS variables injected by App.tsx
               indigo: {
                 50: 'var(--color-primary-50)',
                 100: 'var(--color-primary-100)',
-                500: 'var(--color-primary)', // Base
-                600: 'var(--color-primary)', // Base used in buttons
-                700: 'var(--color-primary-dark)', // Hover
+                500: 'var(--color-primary)', 
+                600: 'var(--color-primary)', 
+                700: 'var(--color-primary-dark)', 
                 900: 'var(--color-primary-darker)',
               },
               teal: {
@@ -36,7 +36,7 @@
             },
             borderRadius: {
               'xl': 'var(--radius)',
-              '2xl': 'var(--radius)', 
+              '2xl': 'calc(var(--radius) * 1.5)', 
             }
           },
         },
@@ -49,7 +49,6 @@
       body {
         font-family: 'Noto Sans Arabic', sans-serif;
       }
-      /* Defaults if JS hasn't loaded yet */
       :root {
         --color-primary: #4f46e5;
         --color-primary-dark: #4338ca;
@@ -61,23 +60,27 @@
         --radius: 0.75rem;
       }
       
-      /* Custom Scrollbar for better aesthetics */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
       }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent; 
       }
-      .dark ::-webkit-scrollbar-track {
-        background: #1e293b; 
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 20px;
       }
-      ::-webkit-scrollbar-thumb {
+      .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #334155; 
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
         background: #94a3b8; 
-        border-radius: 4px;
       }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #64748b; 
+      
+      /* Global Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   <script type="importmap">
