@@ -1,19 +1,19 @@
-# دليل لوحة تحكم المسؤول 🛠️
+# Admin Dashboard Guide 🛠️
 
-لوحة التحكم هي القلب النابض للمشروع، حيث تتيح لك إدارة كل شيء دون لمس الكود.
+The Control Panel is the heart of the project, allowing you to manage everything without touching the code.
 
-## الوصول للوحة التحكم
-- اضغط على أيقونة "الترس" أو "لوحة التحكم" في القائمة العلوية.
-- في أول مرة، ستطلب منك اللوحة تعيين كلمة مرور.
+## Accessing the Dashboard
+- Click the "Gear" or "Dashboard" icon in the top header.
+- If it's your first time, you will be prompted to set a password.
 
-## الأقسام الرئيسية
-1. **نظرة عامة (Overview)**: إحصائيات حية لعدد المستخدمين، العمليات المنفذة، والنشاط اليومي.
-2. **إدارة المستخدمين (Users)**: عرض قائمة المسجلين، تاريخ انضمامهم، وإمكانية حذف الحسابات.
-3. **سجل العمليات (AI Logs)**: سجل كامل لكل عملية توليد أو تعديل تمت، مع عرض الحالة (نجاح/فشل) والنموذج المستخدم.
-4. **إعدادات الموقع**: تغيير اسم الموقع وتفعيل/تعطيل الإعدادات العامة للمستخدمين.
-5. **إدارة النماذج (Models)**: يمكنك تفعيل أو تعطيل نماذج معينة (مثل Gemini Pro) بناءً على حاجتك.
-6. **المظهر (Theme)**: تخصيص الألوان الأساسية وانحناء الحواف (Radius) لتغيير هوية الموقع فوراً.
+## Main Sections
+1. **Overview**: Real-time statistics on user count, executed processes, and daily activity.
+2. **User Management**: View the list of registered users, their join dates, and delete accounts if necessary.
+3. **Process Logs (AI Logs)**: A complete history of every generation or edit performed, showing status (success/failure) and the model used.
+4. **Site Settings**: Change the site name and enable/disable public settings for users.
+5. **Model Management**: Enable or disable specific models (e.g., Gemini Pro) based on your needs.
+6. **Theme Customization**: Change primary colors and border radius to update the site's identity instantly.
 
-## الأمان
-- يتم تخزين جلسة الإدارة لمدة 60 دقيقة فقط.
-- يمكنك تغيير كلمة مرور المسؤول من قسم "الأمان" داخل اللوحة.
+## Security
+- Admin sessions last for 60 minutes.
+- You can change the admin password from the "Security" section within the dashboard.

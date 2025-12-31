@@ -1,24 +1,24 @@
-# الهيكلية التقنية (Architecture) 🏗️
+# Technical Architecture 🏗️
 
-تم بناء المشروع باستخدام أحدث التقنيات لضمان السرعة والخصوصية.
+The project is built using modern technologies to ensure speed and privacy.
 
-## التقنيات المستخدمة
+## Tech Stack
 - **Frontend**: React 19.
-- **Styling**: Tailwind CSS مع نظام RTL مدمج.
-- **AI Engine**: Google Gemini API (نماذج 2.5 Flash و 3.0 Pro).
-- **Storage**: IndexedDB (عبر خدمة `dbService.ts`) للتخزين المحلي الدائم.
+- **Styling**: Tailwind CSS with built-in RTL support.
+- **AI Engine**: Google Gemini API (2.5 Flash and 3.0 Pro models).
+- **Storage**: IndexedDB (via `dbService.ts`) for persistent local storage.
 
-## خيارات النشر والاستضافة (Deployment)
-يدعم المشروع النشر على منصات متعددة، يمكنك مراجعة الأدلة التالية:
-- [النشر على GitHub Pages](./GITHUB_PAGES.md) 🐙
-- [النشر على Cloudflare Pages](./CLOUDFLARE.md) ☁️
-- [النشر على CyberPanel + OpenLiteSpeed](./CYBERPANEL_INSTALL.md) ⚡
+## Deployment Options
+The project supports various hosting platforms. Review the following guides:
+- [Deploying to GitHub Pages](./GITHUB_PAGES.md) 🐙
+- [Deploying to Cloudflare Pages](./CLOUDFLARE.md) ☁️
+- [Deploying to CyberPanel + OpenLiteSpeed](./CYBERPANEL_INSTALL.md) ⚡
 
-## هيكلية الملفات المهمة
-- `/services/geminiService.ts`: مسؤول عن كل اتصالات الذكاء الاصطناعي.
-- `/services/dbService.ts`: نظام قاعدة البيانات المحلي.
-- `/components/AdminDashboard.tsx`: واجهة الإدارة.
-- `App.tsx`: المحرك الرئيسي للتنقل بين الصفحات.
+## Important File Structure
+- `/services/geminiService.ts`: Handles all AI interactions.
+- `/services/dbService.ts`: Local database system.
+- `/components/AdminDashboard.tsx`: Admin interface.
+- `App.tsx`: Main routing and application logic.
 
-## الأمان والخصوصية
-يتم التعامل مع مفاتيح الـ API كمتغيرات بيئة (Environment Variables) في كافة المنصات لضمان عدم تسريبها في الكود المصدري العام.
+## Privacy & Security
+API keys are handled as environment variables across all platforms to ensure they are never leaked in the public source code.

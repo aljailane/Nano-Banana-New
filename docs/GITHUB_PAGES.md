@@ -1,10 +1,10 @@
-# النشر عبر GitHub Pages 🐙🚀
+# Deploying to GitHub Pages 🐙🚀
 
-مرحباً بك في دليل النشر الآلي باستخدام **GitHub**. سنستخدم خاصية **GitHub Actions** لبناء المشروع ورفعه تلقائياً في كل مرة تقوم فيها بتحديث الكود.
+Welcome to the automated deployment guide using **GitHub**. We will use **GitHub Actions** to build and deploy the project automatically whenever you update the code.
 
-## الخطوة 1: تهيئة المستودع (Repository)
-1. قم بإنشاء مستودع جديد على حسابك في GitHub.
-2. ارفع كود المشروع إلى المستودع:
+## Step 1: Initialize Repository
+1. Create a new repository on your GitHub account.
+2. Push your project code:
    ```bash
    git init
    git add .
@@ -13,15 +13,15 @@
    git push -u origin main
    ```
 
-## الخطوة 2: إضافة مفتاح الـ API (Secrets)
-لحماية مفتاح Gemini API الخاص بك:
-1. اذهب إلى إعدادات المستودع **Settings**.
-2. من القائمة الجانبية اختر **Secrets and variables** > **Actions**.
-3. اضغط على **New repository secret**.
-4. الاسم: `API_KEY` | القيمة: (ضع مفتاح Gemini الخاص بك).
+## Step 2: Add API Key (Secrets)
+To protect your Gemini API key:
+1. Go to repository **Settings**.
+2. From the side menu, select **Secrets and variables** > **Actions**.
+3. Click **New repository secret**.
+4. Name: `API_KEY` | Value: (Paste your Gemini API key).
 
-## الخطوة 3: إعداد GitHub Action
-قم بإنشاء ملف في المسار التالي: `.github/workflows/deploy.yml` وضع فيه الكود التالي:
+## Step 3: Setup GitHub Action
+Create a file at `.github/workflows/deploy.yml` and paste the following:
 
 ```yaml
 name: Deploy to GitHub Pages
@@ -52,12 +52,12 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # أو build حسب مخرجات المشروع
+          folder: dist # Or build depending on your config
 ```
 
-## الخطوة 4: تفعيل Pages
-1. اذهب إلى **Settings** > **Pages**.
-2. تحت قسم **Build and deployment**، تأكد من اختيار **GitHub Actions** كمصدر للنشر.
+## Step 4: Enable Pages
+1. Go to **Settings** > **Pages**.
+2. Under **Build and deployment**, ensure **GitHub Actions** is selected as the source.
 
 ---
-**ملاحظة**: تأكد من إضافة `base: '/REPO_NAME/'` في ملف إعدادات Vite (إذا كنت تستخدمه) لضمان عمل المسارات بشكل صحيح على GitHub Pages.
+**Note**: Ensure you add `base: '/REPO_NAME/'` in your Vite config file (if using Vite) for correct routing on GitHub Pages.

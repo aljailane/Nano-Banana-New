@@ -1,41 +1,41 @@
-# النشر عبر Cloudflare Pages ☁️🧡
+# Deploying to Cloudflare Pages ☁️🧡
 
-تعتبر **Cloudflare Pages** واحدة من أسرع وأسهل الطرق لاستضافة تطبيقات React الحديثة، حيث توفر حماية متقدمة وسرعة فائقة بفضل شبكة Cloudflare العالمية.
+**Cloudflare Pages** is one of the fastest and easiest ways to host modern React apps, offering advanced protection and global speed via Cloudflare's network.
 
-## الخطوة 1: ربط الحساب
-1. سجل الدخول إلى [Cloudflare Dashboard](https://dash.cloudflare.com/).
-2. انتقل إلى **Workers & Pages** > **Create application** > **Pages**.
-3. اختر **Connect to Git** وقم بربط مستودع المشروع الخاص بك.
+## Step 1: Connect Account
+1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/).
+2. Navigate to **Workers & Pages** > **Create application** > **Pages**.
+3. Select **Connect to Git** and link your repository.
 
-## الخطوة 2: إعدادات البناء (Build Settings)
-عند اختيار المستودع، سيطلب منك Cloudflare ضبط الإعدادات:
-- **Project name**: (اختر اسماً لمشروعك).
+## Step 2: Build Settings
+After selecting the repo, Cloudflare will ask for settings:
+- **Project name**: (Choose a name for your project).
 - **Production branch**: `main`.
-- **Framework preset**: اختر **Vite** أو **Create React App**.
+- **Framework preset**: Select **Vite** or **Create React App**.
 - **Build command**: `npm run build`.
 - **Build output directory**: `dist`.
 
-## الخطوة 3: إضافة متغيرات البيئة (Variables)
-هذه الخطوة ضرورية لعمل الذكاء الاصطناعي:
-1. قبل الضغط على "Save and Deploy"، اذهب إلى قسم **Environment variables**.
-2. أضف متغيراً جديداً:
+## Step 3: Add Environment Variables
+This step is vital for AI functionality:
+1. Before clicking "Save and Deploy", go to **Environment variables**.
+2. Add a new variable:
    - **Key**: `API_KEY`
-   - **Value**: (مفتاح Gemini API الخاص بك).
-3. تأكد من إضافته لكل من "Production" و "Preview".
+   - **Value**: (Your Gemini API key).
+3. Ensure it is added to both "Production" and "Preview" environments.
 
-## الخطوة 4: معالجة الـ SPA Routing
-لضمان عدم ظهور خطأ 404 عند تحديث الصفحة:
-1. أنشئ ملفاً باسم `_redirects` داخل مجلد `public` في مشروعك.
-2. أضف السطر التالي داخله:
+## Step 4: Handling SPA Routing
+To prevent 404 errors when refreshing the page:
+1. Create a file named `_redirects` inside the `public` folder of your project.
+2. Add the following line:
    ```text
    /* /index.html 200
    ```
-3. سيقوم Cloudflare تلقائياً بتوجيه كافة الطلبات لملف الـ index الرئيسي.
+3. Cloudflare will automatically route all requests to the main index file.
 
-## مميزات Cloudflare Pages
-- **SSL تلقائي**: شهادات أمان مجانية ومحدثة دائماً.
-- **Web Analytics**: إحصائيات دقيقة لزوار موقعك دون انتهاك الخصوصية.
-- **Edge Functions**: يمكنك تشغيل أكواد Backend بسرعة فائقة إذا احتجت لذلك مستقبلاً.
+## Features of Cloudflare Pages
+- **Automatic SSL**: Free, always-updated security certificates.
+- **Web Analytics**: Accurate visitor stats without compromising privacy.
+- **Edge Functions**: Ability to run backend code at the edge if needed later.
 
 ---
-🚀 مبروك! موقعك الآن يعمل على سحابة Cloudflare العالمية.
+🚀 Congratulations! Your site is now running on Cloudflare's global cloud.

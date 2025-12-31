@@ -1,36 +1,36 @@
-# الاستضافة على CyberPanel + OpenLiteSpeed 🌐⚡
+# Hosting on CyberPanel + OpenLiteSpeed 🌐⚡
 
-مرحباً بك في الدليل المتقدم لاستضافة مشروع **نانو بانانا الذكي** على بيئة **CyberPanel**. يتميز هذا الإعداد بالقوة والسرعة بفضل محرك **OpenLiteSpeed**.
+Welcome to the advanced guide for hosting **Nano Banana AI** on a **CyberPanel** environment. This setup offers power and speed thanks to the **OpenLiteSpeed** engine.
 
-## الخطوة 1: إنشاء الموقع في CyberPanel
-1. سجل الدخول إلى لوحة تحكم **CyberPanel** الخاصة بك.
-2. انتقل إلى **Websites** > **Create Website**.
-3. قم بتعبئة البيانات (الدومين، البريد، إصدار PHP - لا يهم كثيراً لأن المشروع Frontend).
-4. تأكد من تفعيل خيار **SSL** و **OpenLiteSpeed**.
+## Step 1: Create a Website in CyberPanel
+1. Log in to your **CyberPanel** dashboard.
+2. Go to **Websites** > **Create Website**.
+3. Fill in the details (Domain, Email, PHP version - PHP version doesn't matter much as this is a frontend project).
+4. Ensure **SSL** and **OpenLiteSpeed** are enabled.
 
-## الخطوة 2: تجهيز ملفات المشروع
-بما أن المشروع يعتمد على React، يجب بناء النسخة النهائية (Build) قبل الرفع:
-1. على جهازك المحلي، قم بتشغيل الأمر:
+## Step 2: Prepare Project Files
+Since this is a React project, you must build the production version before uploading:
+1. On your local machine, run:
    ```bash
    npm run build
    ```
-2. سينتج مجلد باسم `dist` أو `build` يحتوي على ملفات HTML و JS و CSS.
-3. قم بضغط محتويات هذا المجلد في ملف واحد بصيغة `.zip`.
+2. This will generate a folder named `dist` (or `build`) containing HTML, JS, and CSS files.
+3. Compress the contents of this folder into a `.zip` file.
 
-## الخطوة 3: رفع الملفات
-1. في CyberPanel، انتقل إلى **Websites** > **List Websites** > **Manage**.
-2. اضغط على **File Manager**.
-3. ادخل إلى مجلد `public_html`.
-4. قم برفع ملف الـ ZIP الذي أنشأته وفك الضغط عنه هناك.
-5. تأكد من وجود ملف `index.html` في المسار الرئيسي لمجلد `public_html`.
+## Step 3: Upload Files
+1. In CyberPanel, go to **Websites** > **List Websites** > **Manage**.
+2. Click on **File Manager**.
+3. Enter the `public_html` directory.
+4. Upload your ZIP file and extract it there.
+5. Ensure `index.html` is in the root of `public_html`.
 
-## الخطوة 4: ضبط قواعد OpenLiteSpeed (مهم جداً)
-بما أن التطبيق من نوع (Single Page Application)، يجب توجيه كافة الطلبات إلى ملف `index.html` لضمان عمل الروابط الداخلية بشكل صحيح:
-1. من صفحة إدارة الموقع في CyberPanel، ابحث عن **Rewrite Rules**.
-2. قم بلصق الكود التالي في الصندوق:
+## Step 4: Configure OpenLiteSpeed Rules (Crucial)
+As this is a Single Page Application (SPA), all requests must be directed to `index.html` to ensure internal routes work correctly:
+1. From the website management page in CyberPanel, find **Rewrite Rules**.
+2. Paste the following code into the box:
 
 ```apache
-# قواعد إعادة التوجيه لتطبيقات React و SPA
+# Rewrite rules for React and SPA applications
 rewrite {
   enable 1
   base /
@@ -40,15 +40,13 @@ rewrite {
   rule . /index.html [L]
 }
 ```
-3. اضغط على **Save**. سيقوم CyberPanel بإعادة تشغيل OpenLiteSpeed تلقائياً.
+3. Click **Save**. CyberPanel will restart OpenLiteSpeed automatically.
 
-## الخطوة 5: تحسين الأداء عبر الـ Cache
-للحصول على أسرع تجربة مستخدم، تأكد من تفعيل وحدة **LiteSpeed Cache**:
-- اذهب إلى **LSCache** في لوحة تحكم CyberPanel وتأكد من تفعيله للدومين الخاص بك.
+## Step 5: Optimize Performance with Cache
+For the fastest user experience, ensure **LiteSpeed Cache** is active:
+- Go to **LSCache** in CyberPanel and ensure it is enabled for your domain.
 
 ---
-### ملاحظات تقنية:
-- **HTTPS**: لا تنسَ تفعيل شهادة SSL المجانية من Let's Encrypt عبر واجهة CyberPanel لضمان عمل كافة ميزات المتصفح (مثل الكاميرا أو الميكروفون إذا تم إضافتها مستقبلاً).
-- **Node.js**: إذا كنت ترغب في تشغيل خادم خلفي (Backend) لنفس المشروع، يمكنك استخدام قسم **Setup Node.js App** في CyberPanel وتوجيهه للمنفذ المطلوب.
-
-تهانينا! مشروعك الآن يعمل بأقصى سرعة ممكنة على واحد من أقوى محركات الويب في العالم. 🚀
+### Technical Notes:
+- **HTTPS**: Don't forget to issue a free Let's Encrypt SSL certificate via CyberPanel to ensure all browser features work correctly.
+- **Node.js**: If you wish to run a backend for the same project, you can use the **Setup Node.js App** section in CyberPanel.
